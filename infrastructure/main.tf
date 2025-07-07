@@ -5,6 +5,7 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "cst8918-husky-rg"
   location = "East US"
+  ^^
 }
 
 resource "azurerm_virtual_network" "vnet" {
