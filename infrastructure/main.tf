@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  nam     = "cst8918-husky-rg"
+  name     = "cst8918-husky-rg"
   location = "East US"
 }
 
