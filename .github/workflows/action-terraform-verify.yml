@@ -54,15 +54,22 @@ jobs:
     runs-on: ubuntu-latest
     name: terraform validate
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.2.4
 
+      - name: Debug - list files
+        run: ls -la
+        working-directory: ./
+
       - name: Terraform Init
         run: terraform init
+        working-directory: ./
 
       - name: Terraform Validate
         run: terraform validate
+        working-directory: ./
