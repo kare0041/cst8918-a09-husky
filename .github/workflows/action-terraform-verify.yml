@@ -64,12 +64,12 @@ jobs:
 
       - name: Debug - list files
         run: ls -la
-        working-directory: ./
+        working-directory: ./infrastructure
 
       - name: Terraform Init
         run: terraform init
-        working-directory: ./
+        working-directory: ./infrastructure
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: ./
+        working-directory: ./infrastructure
